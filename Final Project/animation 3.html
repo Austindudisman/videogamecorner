@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .a {
+            font-size: 50px;
+            font-family: calibri;
+            color: red;
+            margin-left: 300px;
+            margin-top: -200px;
+            animation-name: first;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes first {
+            0% {
+                margin-top: -200px;
+                font-size: 50px;
+                margin-left: 300px;
+            }
+
+            50% {
+                margin-top: 100px;
+                font-size: 75px;
+                margin-left: 600px;
+            }
+
+            100% {
+                margin-top: 50px;
+                font-size: 100px;
+                margin-left: 300px;
+            }
+        }
+
+        .b {
+            font-size: 60px;
+            font-family: calibri;
+            color: blue;
+            /* margin-left: 400px; */
+            margin-left: -700px;
+            letter-spacing: normal;
+            animation-name: second;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes second {
+            0% {
+                margin-left: -700px;
+                letter-spacing: normal;
+            }
+
+            65% {
+                letter-spacing: 25px;
+                margin-left: 600px;
+            }
+
+            90% {
+                letter-spacing: 10px;
+                margin-left: 300px;
+            }
+
+            100% {
+                margin-left: 400px;
+                letter-spacing: normal;
+            }
+        }
+
+        p {
+            font-size: 25px;
+            font-family: cursive;
+            background-color: darkblue;
+            color: orange;
+            padding: 50px 100px 50px 100px;
+            border-radius: 15px;
+            width: 1000px;
+            /* line-height: 40px; */
+            /* margin-left: 150px; */
+            animation-name: third;
+            margin-left: -1300px;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-delay: 3s;
+        }
+
+        @keyframes third {
+            0% {
+                margin-left: -1300px;
+            }
+
+            100% {
+                margin-left: 150px;
+            }
+
+        }
+
+        button {
+            font-size: 30px;
+            padding: 10px 50px 10px 50px;
+            border: 2px solid black;
+            background-color: darkblue;
+            color: skyblue;
+            animation-name: fourth;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            opacity: 0;
+            border-radius: 10px;
+            margin-left: 600px;
+            animation-delay: 6s;
+        }
+
+        @keyframes fourth {
+
+            60% {
+                opacity: 0.5;
+                color: skyblue;
+                background: darkblue;
+            }
+
+            100% {
+                opacity: 1;
+                color: black;
+                background-color: thistle;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1 class="a">Welcome Everyone</h1> -->
+    <h1 class="b">Welcome Everyone</h1>
+    <p>
+       Today's Subject is Maths and the warm up question is 25% of 200 if you got 50 YOU ARE CORRECT!
+    </p>
+    <button>
+        Here is the Button of fail or the Button of success
+    </button>
+
+</body>
+
+</html>

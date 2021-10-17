@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://controllermodz.co.uk/pub/media/wysiwyg/newxb1-hover.png">
+    <title>Cart</title>
+    <style>
+        #btn-1,#btn-2{
+            padding: 6px 25px 6px 25px;
+            color: white;
+            font-size: 22px;
+            font-family: calibri;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+       
+        #btn-2{
+            background-color: blue;
+        }
+        .box-1{
+            display: flex;
+            margin-left: 10%;
+        }
+        .box-1 div{
+            padding: 20px;
+        }
+        .box-1 div img{
+            height: 25vh;
+            width: 25vw;
+            transition: 0.5s;
+        }
+        .box-1 div img:hover{
+            transform: scale(1.2);
+        }
+        body{
+            background-image: linear-gradient(to bottom right, rgb(233, 156, 156),rgb(255, 255, 255),rgb(255, 180, 180));
+            background-size: cover;
+        }
+
+    h1{
+        text-align: right;
+        color: darkmagenta;
+        font-size: 100px;
+    }
+       
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="#home.html" id="logo">
+            <img src="logo.png" alt="company-logo" height="50px" width="50px" style="border-radius: 50%; margin: -15px;">
+        </a>
+        <a href="home.html" id="a-1">Home</a>
+        <a href="gadgets.html" id="a-2">Gadgets</a>
+        <a href="videogames.html" id="a-3">Video Games</a>
+        <a href="blogs.html" id="a-4">Blogs</a>
+        <a href="cart.html" id="a-5" class="active">Cart</a>
+    </div>
+    <div class="container">
+        <div class="box-1">
+            <div class="content-1">
+                <img src="https://c4.wallpaperflare.com/wallpaper/648/432/924/gadgets-black-sony-ps4-with-controller-wallpaper-preview.jpg" alt="product image"> <br>
+                <b>Price: </b><span>$99.99</span>
+                <b>Quantity: </b>
+                <button onclick="decreaseNum('s1')">-</button>
+                <input type="number" id="s1" min="0" max="50" value="0">
+                <button onclick="increaseNum('s1')">+</button>
+                <br>
+            
+                <button id="btn-2">Added to Cart</button>       
+            </div>
+            <div class="content-2">
+                <img src="data:image/jpeg;base64,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" alt="product image"> <br>
+                <b>Price: </b><span>$99.99</span>
+                <b>Quantity: </b>
+                <button onclick="decreaseNum('s2')">-</button>
+                <input type="number" id="s2" min="0" max="50" value="0">
+                <button onclick="increaseNum('s2')">+</button>
+                <br>
+            
+                <button id="btn-2">Added to Cart</button>       
+            </div>
+            <div class="content-3">
+                <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/12/10/13/oculus-go-vr-headset.jpg?width=982&height=726&auto=webp&quality=75" alt="product image"> <br>
+                <b>Price: </b><span>$99.99</span>
+                <b>Quantity: </b>
+                <button onclick="decreaseNum('s3')">-</button>
+                <input type="number" id="s3" min="0" max="50" value="0">
+                <button onclick="increaseNum('s3')">+</button>
+                <br>
+         
+                <button id="btn-2">Added to Cart</button>            
+            </div>
+        </div>
+        <div class="box-1">
+            <div class="content-1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHIs9hydKNAXVMl6sGm50unQJtQiTKqbs52Q&usqp=CAU" alt="product image"> <br>
+                <b>Price: </b><span>$99.99</span>
+                
+                <br>
+           
+                <button id="btn-2">Added to Cart</button>       
+            </div>
+            <div class="content-2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXyhcQouRvlXuKjO8MzwUHUYTZgmwzhvpbBw&usqp=CAU" alt="product image"> <br>
+                <b>Price: </b><span>$99.99</span>
+                
+                <br>
+       
+                <button id="btn-2">Added to Cart</button>       
+            </div>
+            <div class="content-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdLF68dnzIyFe6AfEntJ2RHJRZyFB3o20Y5g&usqp=CAU" alt="product image"> <br>
+                <b>Price: </b><span>$99.99</span> <br>
+            
+                <button id="btn-2">Added to Cart</button>            
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box-1">
+            <div class="content-1">
+                <img src="https://image.smythstoys.com/original/desktop/202430.jpg" alt="product image"> <br>
+                <b>Price: </b><span>$99.99</span> <br>
+           
+                <button id="btn-2">Added to Cart</button>       
+            </div>
+            <div class="content-2">
+                <img src="https://image.smythstoys.com/zoom/202429.jpg" alt="product image"> <br>
+                <b>Price: </b><span>$99.99</span> <br>
+              
+                <button id="btn-2">Added to Cart</button>       
+            </div>
+            <div class="content-3">
+                <img src="https://cdn-products.eneba.com/resized-products/28Yl7CvGFxxJHfQ9OaOTGrlo1Bve0ejKzx7ERswo_vY_350x200_1x-0.jpeg" alt="product image"> <br>
+                <b>Price: </b><span>$99.99</span> <br>
+                
+                <button id="btn-2">Added to Cart</button>            
+            </div>
+        </div>
+        <div class="box-1">
+            <div class="content-1">
+                <img src="https://m.media-amazon.com/images/I/81nxNas5onL._AC_SY606_.jpg" alt="product image"> <br>
+                <b>Price: </b><span>$99.99</span> <br>
+                
+                <button id="btn-2">Added to Cart</button>       
+            </div>
+            <div class="content-2">
+                <img src="https://i.redd.it/louvs0cpe2o71.jpg" alt="product image"> <br>
+                <b>Price: </b><span>$99.99</span> <br>
+             
+                <button id="btn-2">Added to Cart</button>       
+            </div>
+            <div class="content-3">
+                <img src="https://www.mobygames.com/images/covers/l/283094-minecraft-xbox-360-edition-xbox-360-front-cover.jpg" alt="product image"> <br>
+                <b>Price: </b><span>$99.99</span> <br>
+             
+                <button id="btn-2">Added to Cart</button>            
+            </div>
+        </div>
+       
+ <h1>
+   Total cost: $1199.88
+ </h1>
+
+ <script>
+     function increaseNum(s_id){
+        document.getElementById(s_id).value= eval(document.getElementById(s_id).value+"+"+1)
+     }
+     function decreaseNum(s_id){
+        document.getElementById(s_id).value-=1
+     }
+ </script>
+       
+</body>
+</html>
+ 
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Project</title>
+
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: lightcoral;
+        }
+        #a,#b,#c{
+            height: 90px;
+            width: 150px;
+            border: 2px solid burlywood;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+#a:hover , #b:hover , #c:hover {
+border: 2px solid black ;
+
+}
+ #a{
+     
+      font-size: 30px;
+      background-color: blue;
+      color: rgb(187, 255, 0);
+      border: 2px solid skyblue;
+}
+      
+ 
+
+ #b{
+     font-size: 35px;
+     background: grey;
+     color: yellow;
+ }
+
+ #c{
+font-size: 35px;
+background-color: darkred;
+color: cornsilk;
+ }
+
+ #inp{
+     height: 75px;
+     width: 610px;
+     background: skyblue;
+     color: black;
+     font-size: 30px;
+     font-family: Calabri; 
+     font-family: 800;
+     text-align: right;
+     border: 2px solid white;
+     border-radius: 10px;
+     margin-bottom: 10px;
+
+ }
+    </style>
+</head>
+
+<body>
+
+
+<input type="text" id="inp" placeholder="0"> <br>
+
+<table>
+
+
+<tr>
+    <td>  <input type="button" value="7" id="a" onclick="takeinput(1)"></td>
+    <td>  <input type="button" value="8" id="a" onclick="takeinput(2)"></td>
+    <td>  <input type="button" value="9" id="a" onclick="takeinput(3)" ></td>
+    <td>  <input type="button" value="+" id="b" onclick="takeinput('+')"></td>
+    </tr>
+    <tr>
+        <td>  <input type="button" value="4" id="a" onclick="takeinput(4)"> </td>
+        <td>  <input type="button" value="5" id="a" onclick="takeinput(5)"> </td>
+        <td>  <input type="button" value="6" id="a" onclick="takeinput(6)"> </td>
+        <td>  <input type="button" value="-" id="b" onclick="takeinput('-')"> </td>
+    </tr>
+    <tr>
+        <td>  <input type="button" value="1" id="a" onclick="takeinput(1)"> </td>
+        <td>  <input type="button" value="2" id="a" onclick="takeinput(2)"> </td>
+        <td>  <input type="button" value="3" id="a" onclick="takeinput(3)"> </td>
+        <td>  <input type="button" value="x" id="b" onclick="takeinput('*')"> </td>
+    </tr>
+    <tr>
+        <td>  <input type="button" value="C" id="c" onclick="clearinput()" > </td>
+        <td>  <input type="button" value="0" id="a" onclick="takeinput(0)"> </td>
+        <td>  <input type="button" value="=" id="c" onclick="showanswer()"> </td>
+        <td>  <input type="button" value="÷" id="b" onclick="takeinput('/')"> </td>
+    </tr>
+    
+</table>
+
+<script>
+  function takeinput(num){
+            document.getElementById("inp").value =  document.getElementById("inp").value + num
+            
+  }
+
+function clearinput(){
+    document.getElementById("inp").value = ""
+}
+
+function showanswer(){
+    var exp = document .getElementById("inp").value
+    var answer = eval(exp)
+    document.getElementById("inp").value = answer
+}
+</script>
+
+
+
+
+</body>
+</html>
